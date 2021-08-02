@@ -15,8 +15,8 @@
 <body>
 <h3>Hello World</h3>
 <form>
-    <input type="submit" value="Borrow Book" formaction="/getListBook" formmethod="get">
-    <input type="submit" value="Return Book" formaction="/returnBook" formmethod="post">
+    <input type="submit" value="Borrow Book" formaction="/listBook" formmethod="get">
+    <input type="submit" value="Return Book" formaction="/returnBook" formmethod="get">
 </form>
 </body>
 </html>

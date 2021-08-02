@@ -3,6 +3,7 @@ package model;
 import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "book_card")
@@ -10,8 +11,9 @@ public class BookCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column
-    @NumberFormat(pattern="#####")
+    @Column(unique = true)
+    @NumberFormat(pattern = "#####")
+    @NotNull
     private Integer code;
     @OneToOne
     @JoinColumn(name = "book_id")

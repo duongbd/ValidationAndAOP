@@ -1,5 +1,7 @@
 package model;
 
+import CustomExecption.OutOfBooks;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 
@@ -45,7 +47,13 @@ public class Book {
         this.remain++;
     }
 
-    public void decrementRemain() throws Exception {
-        this.remain--;
+    public void decrementRemain() throws OutOfBooks {
+        if (this.remain - 1 < 0)
+            throw new OutOfBooks();
+        else this.remain--;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }
