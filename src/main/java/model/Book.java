@@ -1,6 +1,7 @@
 package model;
 
 import CustomExecption.OutOfBooks;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;

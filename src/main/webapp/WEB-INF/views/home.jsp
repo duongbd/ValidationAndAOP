@@ -13,7 +13,7 @@
     <title>Title</title>
 </head>
 <body>
-<h3>Hello World</h3>
+<h3>Library</h3>
 <form>
     <input type="submit" value="Borrow Book" formaction="/listBook" formmethod="get">
     <input type="submit" value="Return Book" formaction="/returnBook" formmethod="get">
